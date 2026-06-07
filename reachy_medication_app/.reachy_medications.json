@@ -1,0 +1,57 @@
+{
+  "medications": [
+    {
+      "drug_name": "Lisinopril",
+      "strength": "20 mg",
+      "instructions": "Take 1 tablet once daily",
+      "appearance": "",
+      "dosage_count": 1,
+      "frequency": "once daily",
+      "color": "",
+      "shape": "",
+      "doctor_override": null,
+      "label_original_instructions": "",
+      "added_at": 1780084966.124928
+    },
+    {
+      "drug_name": "Spironolactone",
+      "strength": "50mg",
+      "instructions": "Take 1 tablet by mouth once daily",
+      "appearance": "white circular tablet",
+      "dosage_count": 1,
+      "frequency": "once daily",
+      "color": "white",
+      "shape": "round",
+      "doctor_override": null,
+      "label_original_instructions": "",
+      "added_at": 1780700329.837473
+    },
+    {
+      "drug_name": "Methyl CpG",
+      "strength": "unknown",
+      "instructions": "Take 2 per day",
+      "appearance": "brown capsule",
+      "dosage_count": 2,
+      "frequency": "daily",
+      "color": "brown",
+      "shape": "capsule",
+      "doctor_override": null,
+      "label_original_instructions": "",
+      "added_at": 1780700640.73558
+    }
+  ],
+  "dose_log": [
+    {
+      "drug_name": "Spironolactone",
+      "taken_at": 1780699151.065652,
+      "taken_at_str": "2026-06-05 15:39:11",
+      "notes": "There is exactly one white round tablet on the tray, which matches the expected medication."
+    },
+    {
+      "drug_name": "Spironolactone",
+      "taken_at": 1780700491.5178869,
+      "taken_at_str": "2026-06-05 16:01:31",
+      "notes": "There is exactly one white round tablet which matches the prescribed Spironolactone 50mg."
+    }
+  ]
+}

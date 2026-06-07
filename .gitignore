@@ -1,0 +1,30 @@
+# ── Secrets: NEVER commit ─────────────────────────────
+.env
+**/.env
+*.key
+
+# ── Python virtual environment (this folder is also a venv) ──
+bin/
+lib/
+lib64/
+include/
+share/
+pyvenv.cfg
+CACHEDIR.TAG
+.lock
+.cache/
+
+# ── Python caches / build artifacts ───────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# ── Backups, archives, large raw outputs ──────────────
+archive/
+*.tar.gz
+*.ppm
+
+# ── OS junk ───────────────────────────────────────────
+.DS_Store

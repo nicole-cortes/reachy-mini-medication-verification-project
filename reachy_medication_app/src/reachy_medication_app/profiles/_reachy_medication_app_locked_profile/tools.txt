@@ -1,0 +1,35 @@
+# Available tools for this profile.
+# - Lines starting with '#' are disabled.
+# - Built-in robot/expression tools come from reachy_medication_app/tools/
+# - Custom medication tools are defined in this folder.
+
+# === Robot motion / expression (built-in) ===
+dance
+stop_dance
+play_emotion
+stop_emotion
+camera
+sweep_look
+#do_nothing
+head_tracking
+move_head
+
+# === Medication workflow (custom — files in this folder) ===
+# The full Friday workflow:
+#   user shows bottle ──► camera ──► (user confirms) ──► add_medication
+#   if camera is still unclear ──► scan_bottle fallback
+#   user shows pills  ──► verify_dose
+#   "what meds do I have?" ──► list_medications
+#   "remind me in 30s" ──► set_reminder, then check_pending_reminders
+scan_bottle
+add_medication
+verify_dose
+count_pills
+list_medications
+set_reminder
+check_pending_reminders
+check_dose_history
+
+# Legacy / kept for backward compatibility (not used in the new flow).
+# Leave enabled for now so the LLM can fall back to it if needed.
+check_medications
