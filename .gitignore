@@ -26,5 +26,11 @@ archive/
 *.tar.gz
 *.ppm
 
+# ── App runtime state (regenerated when the app runs) ──
+**/.reachy_medications.json
+
+# ── Video assets not needed for code review ───────────
+video_slides/05_demo_dance.png
+
 # ── OS junk ───────────────────────────────────────────
 .DS_Store

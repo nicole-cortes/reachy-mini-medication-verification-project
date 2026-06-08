@@ -1,5 +1,7 @@
 # Reachy Mini Medication Project
 
+**Demo video:** https://youtu.be/kM0BgfjUoeA
+
 This is my independent study project for my M.S. in Computer Science. I wanted to
 see if a small tabletop robot (the Reachy Mini) with a vision-language model could
 help older adults *check* their medications at home, not just remind them. So the
@@ -47,8 +49,9 @@ and `pyvenv.cfg` are environment files. Leave those alone.
 4. **Reachy camera comparison test.** Tested where the counts actually break. It was
    only the dense, overlapping layouts, not the camera or the code.
 5. **Built the app.** Bottle scan, dose verification, reminders, and safety rules.
-6. **Three demos.** (1) read label, save, remind. (2) verify a dose and warn if it
-   was already taken. (3) catch a wrong pill count.
+6. **Three demos.** (1) read a label, save the medication, set a reminder. (2) verify
+   a dose, log it, and tell whether it was already taken. (3) catch a wrong pill
+   count, explain it, then confirm the count after I fix it.
 
 ## Running the app
 
