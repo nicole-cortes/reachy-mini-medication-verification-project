@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabletop Robot for Vision-Based Medication Verification at Home</title>
+  <meta name="description" content="Independent study: a Reachy Mini tabletop robot uses a vision-language model to read medication labels, count pills, and verify doses for older adults at home.">
+  <meta property="og:title" content="Tabletop Robot for Vision-Based Medication Verification at Home">
+  <meta property="og:description" content="A Reachy Mini robot + vision-language model that reads bottle labels, counts pills, and verifies doses — not just reminders.">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --accent: #1d4e89;
+      --accent-light: #eaf1f8;
+      --bg: #ffffff;
+      --card: #f8fafc;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    header { text-align: center; padding: 64px 0 32px; }
+    h1 {
+      font-size: 2.3rem;
+      line-height: 1.25;
+      color: var(--accent);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+    .author { font-size: 1.15rem; margin-bottom: 4px; }
+    .author a { color: var(--accent); text-decoration: none; }
+    .author a:hover { text-decoration: underline; }
+    .affiliation { color: var(--muted); font-size: 1rem; margin-bottom: 4px; }
+    .supervisors { color: var(--muted); font-size: 0.95rem; margin-bottom: 26px; }
+    .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--ink); color: #fff;
+      padding: 10px 22px; border-radius: 24px;
+      text-decoration: none; font-size: 0.95rem; font-weight: 600;
+      transition: background 0.15s ease;
+    }
+    .btn:hover { background: var(--accent); }
+    section { padding: 28px 0; }
+    h2 {
+      font-size: 1.5rem; color: var(--accent);
+      margin-bottom: 14px; text-align: center;
+    }
+    .video-wrap {
+      position: relative; width: 100%; padding-top: 56.25%;
+      border-radius: 12px; overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    }
+    .video-wrap iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+    }
+    .abstract p { text-align: justify; }
+    .steps { counter-reset: step; list-style: none; margin-top: 8px; }
+    .steps li {
+      background: var(--card);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+    }
+    .steps li strong { color: var(--accent); }
+    .fig-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 8px; }
+    .fig-row figure { flex: 1 1 300px; }
+    .fig-row img {
+      width: 100%; border-radius: 10px; display: block;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    }
+    figcaption {
+      font-size: 0.88rem; color: var(--muted);
+      margin-top: 8px; text-align: center;
+    }
+    .fig-note { font-size: 0.95rem; color: var(--muted); text-align: center; margin-top: 14px; }
+    .demos { list-style: none; }
+    .demos li {
+      background: var(--accent-light);
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+    }
+    .demos li::before { content: "▶ "; color: var(--accent); font-weight: 700; }
+    .bibtex {
+      background: #f3f4f6; border-radius: 10px;
+      padding: 18px; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.82rem; overflow-x: auto; white-space: pre;
+      color: #374151;
+    }
+    footer {
+      text-align: center; color: var(--muted);
+      font-size: 0.85rem; padding: 40px 0 32px;
+      border-top: 1px solid #e5e7eb; margin-top: 40px;
+    }
+    footer a { color: var(--accent); }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6rem; }
+      header { padding: 40px 0 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Tabletop Robot for Vision-Based<br>Medication Verification at Home</h1>
+      <p class="author"><a href="https://github.com/nicole-cortes">Nicole Cortes</a></p>
+      <p class="affiliation">M.S. Computer Science — Independent Study, Stanford University</p>
+      <p class="supervisors">Supervised by Michelle Baldonado, Oussama Khatib, and Steve Cousins</p>
+      <div class="links">
+        <a class="btn" href="paper/paper.pdf">📄 Paper</a>
+        <a class="btn" href="https://github.com/nicole-cortes/reachy-mini-medication-verification-project">&lt;/&gt; Code</a>
+        <a class="btn" href="https://youtu.be/kM0BgfjUoeA">🎥 Video</a>
+      </div>
+    </header>
+
+    <section>
+      <div class="video-wrap">
+        <iframe src="https://www.youtube.com/embed/kM0BgfjUoeA" title="Demo video" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </section>
+
+    <section class="abstract">
+      <h2>Abstract</h2>
+      <p>
+        Older adults who manage their own medication at home make frequent errors —
+        polypharmacy, cognitive decline, and physical limits all play a part. Most
+        assistive technology only <em>reminds</em> people to take a dose; it does not
+        check that the pills in hand are the right ones. A review of 25 papers shows
+        that no prior study tests vision-based pill counting or verification on a real
+        home robot. This project asks whether a tabletop social robot (Reachy Mini)
+        with a vision-language model (VLM) can help with that verification step. We
+        first tested three VLMs on 15 controlled pill images using three prompts;
+        Gemini was the most accurate, with overlapping and touching pills as the main
+        failure mode. Prompting on its own did not fix counting errors. We then built
+        a voice-conversational verification system that scans bottles, verifies doses,
+        sets reminders, and checks dose history — with safety rules that keep the
+        robot inside the trust boundary older adults prefer: it verifies and reminds,
+        but never gives clinical advice. A four-route camera test (20 trials) shows
+        the system counts reliably except when pills are dense and overlapping — a
+        limit of the vision task itself, not the robot's camera or code path. We show
+        three end-to-end interactions and discuss the design, its limits, and future work.
+      </p>
+    </section>
+
+    <section>
+      <h2>The Project, Step by Step</h2>
+      <ol class="steps">
+        <li><strong>Literature review (25 papers).</strong> Found the gap: lots of technology reminds people to take medication, but almost none uses vision to verify the right pills on a real home robot.</li>
+        <li><strong>Experiment 1 — model comparison.</strong> ChatGPT vs. Claude vs. Gemini on 15 pill images and 3 prompts. Gemini was the most accurate; overlapping and touching pills were the hardest cases.</li>
+        <li><strong>Experiment 2 — prompting study.</strong> Gemini with 10 different prompts. Prompting alone did not reliably fix counting errors.</li>
+        <li><strong>Camera comparison test.</strong> A four-route test to isolate where counts break: it was only the dense, overlapping pill layouts — not the camera, not the code.</li>
+        <li><strong>Built the app.</strong> A voice-conversational assistant on the Reachy Mini: bottle scanning, dose verification, reminders, dose history, and safety rules.</li>
+        <li><strong>Three end-to-end demos</strong> recorded on the real robot.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Demos</h2>
+      <ul class="demos">
+        <li><strong>Scan &amp; save:</strong> read a bottle label, save the medication, and set a reminder.</li>
+        <li><strong>Verify &amp; log:</strong> verify a dose, log it, and tell whether it was already taken today.</li>
+        <li><strong>Catch a mistake:</strong> catch a wrong pill count, explain it, then confirm the corrected count.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Citation</h2>
+      <div class="bibtex">@techreport{cortes2026reachymedication,
+  author      = {Cortes, Nicole},
+  title       = {Tabletop Robot for Vision-Based Medication Verification at Home},
+  institution = {Stanford University},
+  type        = {M.S. Computer Science Independent Study},
+  year        = {2026},
+  note        = {Supervised by Michelle Baldonado, Oussama Khatib, and Steve Cousins}
+}</div>
+    </section>
+
+    <footer>
+      <p>Nicole Cortes · <a href="https://github.com/nicole-cortes/reachy-mini-medication-verification-project">View the code on GitHub</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>
